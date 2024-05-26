@@ -1,4 +1,4 @@
-Resortify: "Your Perfect Stay, Just a Click Away!"
+<h1> Resortify: "Your Perfect Stay, Just a Click Away!" </h1> 
 
 Welcome to Resortify, your ultimate destination for booking the perfect resort getaway! With our user-friendly interface and comprehensive booking system, finding and securing your dream accommodation has never been easier. Explore our website today and start planning your next unforgettable vacation! 
 
