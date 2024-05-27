@@ -11,6 +11,53 @@
         <link rel="stylesheet" href="../css/index.css" type="text/css">
     </head>
     <body>
+        <header>
+            <img src="../img/Resortify Logo.png"> 
+            <nav>
+                <a href="../htdocs/index.html"> Home </a>
+                <a href="../htdocs/page1.html"> Rooms </a>
+                <a href="#contactForm"> Contact Us </a>
+                <a href="#bookingForm"> BOOK NOW </a>
+            </nav>
+            </br> 
+        </header>
+        <main>
+            <section id="introduction"> 
+                <h1> Resortify: “Your Perfect Stay, Just a Click Away!” </h1>
+                <p> It is the best online travel service application/resort accommodation booking site, where you will find the best recommendations at lower rates. Enjoy your visit! </p>
+            </section>
+            <section id="bookingForm">
+                <form onsubmit="return displayOutput()">
+                    <fieldset> 
+                        <h2> Booking Your Resort </h2>
+                        <label for="checkIn"> Check In: </label> <br><br>
+                        <label for="checkInDate"> Date </label>
+                        <input type="date" id="checkInDate" name="checkInDate" required onblur="onBlur(this)" onfocus="onFocus(this)"/>
+                        <label for="checkInTime"> Time </label>
+                        <input type="time" id="checkInTime" name="checkInTime" required onblur="onBlur(this)" onfocus="onFocus(this)"/><br><br>
+                        <label for="checkOut"> Check Out: </label> <br><br>
+                        <label for="checkOutDate"> Date </label>
+                        <input type="date" id="checkOutDate" name="checkOutDate" required onblur="onBlur(this)" onfocus="onFocus(this)"/>
+                        <label for="checkOutTime"> Time </label>
+                        <input type="time" id="checkOutTime" name="checkOutTime" required onblur="onBlur(this)" onfocus="onFocus(this)"/><br><br>
+                        <label for="guests"> Guests: </label>
+                        <input type="number" id="guests" min="1" max="10" required onblur="onBlur(this)" onfocus="onFocus(this)"/> <br><br>
+                        <label for="roomRates"> Room Rates: </label>
+                        <select id="roomRates" name="roomRates" required onblur="onBlur(this)" onfocus="onFocus(this)"> 
+                            <option value="" disabled selected hidden> Choose your desired price range. </option>
+                            <option id="lowest" value="1000-3000"> Php 1000-3000 </option>
+                            <option id="middle" value="3001-5000"> Php 3001-5000 </option>
+                            <option id="highest" value="5001-7000"> Php 5001-7000 </option>
+                        </select> <br><br>
+                        <button type="submit"> CHECK AVAILABILITY </button> <br><br>
+                        <button type="reset" onclick="clearAll()">Clear All</button>
+                    </fieldset> 
+                </form>
+            </section>
+        </main>
+        <footer>
+            
+        </footer>
         <script src="../src/index.js"> </script>
     </body>
 <html> 
