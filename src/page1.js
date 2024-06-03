@@ -18,6 +18,12 @@ function fillFormFields() {
     document.getElementById('checkOutTime').value = localStorage.getItem('checkOutTime') || '';
     document.getElementById('guests').value = localStorage.getItem('guests') || '';
     document.getElementById('roomRates').value = localStorage.getItem('roomRates') || '';
+    document.getElementById('firstname').value = localStorage.getItem('firstname') || '';
+    document.getElementById('lastname').value = localStorage.getItem('lastname') || '';
+    document.getElementById('email').value = localStorage.getItem('email') || '';
+    document.getElementById('mobile').value = localStorage.getItem('mobile') || '';
+
+
     setRoomImage();
 }
 
@@ -31,60 +37,61 @@ function setRoomImage() {
 
     let roomImage = "";
     let roomType = "";
+    let hotelName = "";
 
     if (priceRange === "1000-2999") {
         if (numberOfGuests === 1) {
             roomImage = "single-room.jpg";
             roomType = "Single Room";
-            hotelName = "Go Hotels Iloilo"
+            hotelName = "Go Hotels Iloilo";
         } else if (numberOfGuests <= 4) {
             roomImage = "double-room.jpg";
             roomType = "Double Room";
-            hotelName = "Tune Hotel - Makati"
+            hotelName = "Tune Hotel - Makati";
         } else if (numberOfGuests <= 6) {
             roomImage = "triple-room.jpg";
             roomType = "Triple Room";
-            hotelName = "City Garden Hotel Makati"
+            hotelName = "City Garden Hotel Makati";
         } else {
             roomImage = "deluxe-room.jpg";
             roomType = "Deluxe Room";
-            hotelName = "Bayfront Hotel Cebu"
+            hotelName = "Bayfront Hotel Cebu";
         }
     } else if (priceRange === "3000-4999") {
         if (numberOfGuests === 1) {
             roomImage = "single-room.jpg";
             roomType = "Single Room";
-            hotelName = "Discovery Suites Ortigas"
+            hotelName = "Discovery Suites Ortigas";
         } else if (numberOfGuests <= 4) {
             roomImage = "double-room.jpg";
             roomType = "Double Room";
-            hotelName = "The Linden Suites Manila"
+            hotelName = "The Linden Suites Manila";
         } else if (numberOfGuests <= 6) {
             roomImage = "triple-room.jpg";
             roomType = "Triple Room";
-            hotelName = "Golden Phoenix Hotel Manila"
+            hotelName = "Golden Phoenix Hotel Manila";
         } else {
             roomImage = "deluxe-room.jpg";
             roomType = "Deluxe Room";
-            hotelName = "The Heritage Hotel Manila"
+            hotelName = "The Heritage Hotel Manila";
         }
     } else if (priceRange === "5000-6999") {
         if (numberOfGuests === 1) {
             roomImage = "single-room.jpg";
             roomType = "Single Room";
-            hotelName = "New World Makati Hotel"
+            hotelName = "New World Makati Hotel";
         } else if (numberOfGuests <= 4) {
             roomImage = "double-room.jpg";
             roomType = "Double Room";
-            hotelName = "The Farm at San Benito"
+            hotelName = "The Farm at San Benito";
         } else if (numberOfGuests <= 6) {
             roomImage = "triple-room.jpg";
             roomType = "Triple Room";
-            hotelName = "Shangri-La Mactan Resort & Spa"
+            hotelName = "Shangri-La Mactan Resort & Spa";
         } else {
             roomImage = "deluxe-room.jpg";
             roomType = "Deluxe Room";
-            hotelName = "The Peninsula Manila"
+            hotelName = "The Peninsula Manila";
         }
     }
 
@@ -92,6 +99,33 @@ function setRoomImage() {
     document.getElementById('roomType').innerText = roomType;
     document.getElementById('hotelName').innerText = hotelName;
 }
+
+document.getElementById('bookingForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    localStorage.setItem('firstname', document.getElementById('firstname').value);
+    localStorage.setItem('lastname', document.getElementById('lastname').value);
+    localStorage.setItem('email', document.getElementById('email').value);
+    localStorage.setItem('mobile', document.getElementById('mobile').value);
+    localStorage.setItem('checkInDate', document.getElementById('checkInDate').value);
+    localStorage.setItem('checkInTime', document.getElementById('checkInTime').value);
+    localStorage.setItem('checkOutDate', document.getElementById('checkOutDate').value);
+    localStorage.setItem('checkOutTime', document.getElementById('checkOutTime').value);
+    localStorage.setItem('guests', document.getElementById('guests').value);
+    localStorage.setItem('roomRates', document.getElementById('roomRates').value);
+    localStorage.setItem('paymentMethod', document.querySelector('input[name="payment-method"]:checked').value);
+
+    const paymentMethod = document.querySelector('input[name="payment-method"]:checked').value;
+
+    if (paymentMethod === 'card') {
+        localStorage.setItem('card-number', document.getElementById('card-number').value);
+        localStorage.setItem('card-expiry', document.getElementById('card-expiry').value);
+        localStorage.setItem('card-cvc', document.getElementById('card-cvc').value);
+    } else if (paymentMethod === 'gcash') {
+        localStorage.setItem('gcash-number', document.getElementById('gcash-number').value);
+    }
+
+    window.location.href = 'page2.html';
+});
 
 window.onload = function() {
     fillFormFields();
