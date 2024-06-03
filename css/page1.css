@@ -1,112 +1,142 @@
-   body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background-color: #fafafa;
-  }
-  
-  header {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-  }
-  
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #fafafa;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+header p {
+  margin: 10px 0 0;
+  font-size: 1.2em;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+section#booking {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section#booking h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+form fieldset {
+  border: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+form legend {
+  font-size: 1.5em;
+  color: #333;
+}
+
+form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+form input[type="radio"] {
+  margin-left: 20px;
+}
+
+form input[type="radio"] + label {
+  display: inline-block;
+  margin: 0 20px 0 0;
+}
+
+form input[type="radio"]:not(:first-of-type) {
+  margin-left: 20px;
+}
+
+form fieldset {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
   header h1 {
-    margin: 0;
-    font-size: 2.5em;
-  }
-  
-  header p {
-    margin: 10px 0 0;
-    font-size: 1.2em;
-  }
-  
-  .container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 0 20px;
-  }
-  
-  section#booking {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  section#booking h2 {
-    margin-top: 0;
-    color: #333;
-  }
-  
-  form fieldset {
-    border: none;
-    padding: 0;
-    margin: 20px 0;
-  }
-  
-  form legend {
-    font-size: 1.5em;
-    color: #333;
-  }
-  
-  form label {
-    display: block;
-    margin: 10px 0 5px;
-    font-weight: bold;
-  }
-  
-  form input[type="text"],
-  form input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    font-size: 1em;
-  }
-  
-  form input[type="radio"] {
-    margin-left: 20px;
-  }
-  
-  form input[type="radio"] + label {
-    display: inline-block;
-    margin: 0 20px 0 0;
-  }
-  
-  form input[type="radio"]:not(:first-of-type) {
-    margin-left: 20px;
-  }
-  
-  form fieldset {
-    background-color: white;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  @media (max-width: 600px) {
-    header h1 {
       font-size: 2em;
-    }
-  
-    header p {
-      font-size: 1em;
-    }
-  
-    .container {
-      padding: 0 10px;
-    }
-  
-    form legend {
-      font-size: 1.2em;
-    }
   }
-  
-  
+
+  header p {
+      font-size: 1em;
+  }
+
+  .container {
+      padding: 0 10px;
+  }
+
+  form legend {
+      font-size: 1.2em;
+  }
+}
+
+.button {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  background-color: grey;
+  padding: 10px;
+  font-style: bold;
+}
+
+.room-image {
+  display: block;
+  width: 270px;
+  height: 200px;
+  border-radius: 10px;
+  margin: 10px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.room-info {
+  display: flex;
+  align-items: center;
+}
+
+.room-image-container {
+  flex: 1;
+}
+
+.room-type {
+  margin-left: 20px;
+}
