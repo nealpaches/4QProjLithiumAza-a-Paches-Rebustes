@@ -14,3 +14,19 @@ function clearAll() {
         document.getElementById("output").innerHTML = ""; 
     }
 }
+
+document.getElementById('booking-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    localStorage.setItem('checkInDate', document.getElementById('checkInDate').value);
+    localStorage.setItem('checkInTime', document.getElementById('checkInTime').value);
+    localStorage.setItem('checkOutDate', document.getElementById('checkOutDate').value);
+    localStorage.setItem('checkOutTime', document.getElementById('checkOutTime').value);
+    localStorage.setItem('guests', document.getElementById('guests').value);
+    localStorage.setItem('roomRates', document.getElementById('roomRates').value);
+    window.location.href = 'page1.html';
+});
+
+
+function redirect(){
+    window.open("../htdocs/page1.html")
+}
