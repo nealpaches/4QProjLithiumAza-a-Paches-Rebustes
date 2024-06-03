@@ -35,17 +35,21 @@
                 </fieldset>
                 <fieldset>
                     <legend>Step 2: Property Details</legend>
-                    <p>Check - in date:</p>
+                    <label for="room">Room</label>
+                    <img id="roomImage" src="" class="room-image">
+                    <h1 id="hotelName"></h1>
+                    <h1 id="roomType"></h1>
+                    <label for="checkInDate">Check-In Date</label>
                     <input type="text" id="checkInDate" name="checkInDate" disabled>
-                    <p>Check - in time:</p>
+                    <label for="checkInTime">Check-In Time</label>
                     <input type="text" id="checkInTime" name="checkInTime" disabled>
-                    <p>Check - out time</p>
-                    <input type="text" id="checkOutTime" name="checkOutTime" disabled>
-                    <p>Check - out date</p>
+                    <label for="checkOutDate">Check-Out Date</label>
                     <input type="text" id="checkOutDate" name="checkOutDate" disabled>
-                    <p>Guests: </p>
+                    <label for="checkOutTime">Check-Out Time</label>
+                    <input type="text" id="checkOutTime" name="checkOutTime" disabled>
+                    <label for="guests">Guests</label>
                     <input type="text" id="guests" name="guests" disabled>
-                    <p>Desired Price Range:</p>
+                    <label for="roomRates">Desired Price Range</label>
                     <input type="text" id="roomRates" name="roomRates" disabled>
                 </fieldset>
                 <fieldset>
@@ -71,7 +75,7 @@
                         <input type="text" id="gcash-number" name="gcash-number">
                     </div>
                 </fieldset>
-                <button type="submit">Submit</button>
+                <button class="button" type="submit">Submit</button>
             </form>
         </section>
     </div>
