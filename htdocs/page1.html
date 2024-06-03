@@ -1,16 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta description="Resortify Booking Page">
-        <meta keywords="HTML, CSS, JavaScript">
-        <meta name="authors" content="Zachariah Francis G. Azaña, Neal David E. Paches, Kyden Gabriel L. Rebustes">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Booking </title>
-        <link rel="icon" href="../img/Resortify Favicon.png" type="image/gif">
-        <link rel="stylesheet" href="../css/page1.css" type="text/css">
-    </head>
-    <body>
-        <script src="../src/page1.js"> </script>
-    </body>
-<html> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Resortify Booking Page">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Zachariah Francis G. Azaña, Neal David E. Paches, Kyden Gabriel L. Rebustes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link rel="icon" href="../img/Resortify Favicon.png" type="image/gif">
+    <link rel="stylesheet" href="../css/page1.css" type="text/css">
+</head>
+<body>
+    <script src="../src/page1.js"></script>
+    <header>
+        <h1>Welcome to Resortify!</h1>
+        <p>“Your Perfect Stay, Just a Click Away!”</p>
+    </header>
+    <div class="container">
+        <section id="booking">
+            <h2>Secure Booking</h2>
+            <form>
+                <fieldset>
+                    <legend>Step 1: Your Details</legend>
+                    <label for="firstname">First name</label>
+                    <input type="text" id="firstname" name="firstname" required>
+                    
+                    <label for="lastname">Last name</label>
+                    <input type="text" id="lastname" name="lastname" required>
+                    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+        
+                    <label for="mobile">Mobile number</label>
+                    <input type="text" id="mobile" name="mobile" required>
+                </fieldset>
+                <fieldset>
+                    <legend>Step 2: Property Details</legend>
+                    <p>Check - in date:</p>
+                    <input type="text" id="checkInDate" name="checkInDate" disabled>
+                    <p>Check - in time:</p>
+                    <input type="text" id="checkInTime" name="checkInTime" disabled>
+                    <p>Check - out time</p>
+                    <input type="text" id="checkOutTime" name="checkOutTime" disabled>
+                    <p>Check - out date</p>
+                    <input type="text" id="checkOutDate" name="checkOutDate" disabled>
+                    <p>Guests: </p>
+                    <input type="text" id="guests" name="guests" disabled>
+                    <p>Desired Price Range:</p>
+                    <input type="text" id="roomRates" name="roomRates" disabled>
+                </fieldset>
+                <fieldset>
+                    <legend>Step 3: Payment Method</legend>
+                    <input type="radio" id="payment-card" name="payment-method" value="card" onclick="togglePaymentDetails('card')">
+                    <label for="payment-card">Card</label>
+                    <input type="radio" id="payment-gcash" name="payment-method" value="gcash" onclick="togglePaymentDetails('gcash')">
+                    <label for="payment-gcash">Gcash</label>
+
+                    <div id="card-details" style="display:none;">
+                        <label for="card-number">Card Number</label>
+                        <input type="text" id="card-number" name="card-number">
+
+                        <label for="card-expiry">Expiry Date</label>
+                        <input type="text" id="card-expiry" name="card-expiry" placeholder="MM/YY">
+
+                        <label for="card-cvc">CVC</label>
+                        <input type="text" id="card-cvc" name="card-cvc">
+                    </div>
+
+                    <div id="gcash-details" style="display:none;">
+                        <label for="gcash-number">Gcash Number</label>
+                        <input type="text" id="gcash-number" name="gcash-number">
+                    </div>
+                </fieldset>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
