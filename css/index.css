@@ -1,58 +1,146 @@
+/* Body Styles */
 body {
-    margin: 20px 40px;
-    padding: 10px;
-    background: url(../img/index-background.JPG) center/cover no-repeat;
+  margin: 25px;
+  padding: 15px;
+  background: url(../img/background.jpg) center/cover no-repeat;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 20px;
+  color: #333;
 }
 
+/* Main Content Styles */
 main {
-    height: 100vh; 
+  height: calc(100vh - 120px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-p, li {
-    font: italic 20px/30px monospace; 
-    text-shadow: 2px 2px #dedededa;
-    text-align: justify;
+/* Paragraph Styles */
+p {
+  font-size: 25px;
+  line-height: 1.5;
+  text-align: justify;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.75);
 }
 
+/* Headings Styles */
 section h1 {
-    font: 60px serif; 
-    text-shadow: 4px 4px rgba(0, 0, 0, 0.254);
-    line-height: 80px;
+  font-size: 60px;
+  line-height: 1;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+/* Introduction Section Styles */
 #introduction {
-    width: 40%;
+  width: 40%;
+  padding-right: 20px;
 }
 
+/* Booking Form Section Styles */
 #bookingForm {
-    width: 48%;
-    margin-left: auto; 
-    margin-right: 0;
-    display: flex;
-    flex-direction: column;
+  width: 50%;
+  padding-left: 20px;
 }
 
+/* Navigation Link Styles */
 nav a {
-    color: rgba(0, 0, 0, 0.87); 
-    font: bold 25px monospace; 
-    text-shadow: 2px 2px #dedede2a;
-    text-decoration: none;
-    padding: 12px 24px; 
+  color: #333;
+  font-size: 25px;
+  text-decoration: none;
+  padding: 12px 24px;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: 300;
 }
 
 nav a:hover {
-    color: rgba(0, 0, 0, 0.254); 
+  color: #01628c;
+  font-weight: bold;
 }
 
-a:active {
+nav a:active {
     text-decoration: underline;
 }
 
+/* Header Navigation Styles */
 header nav {
-    text-align: right;
+  text-align: center;
 }
 
+/* Header Logo Styles */
 header img {
-    width: 400px;
-    height: 100px;
+  width: 350px;
+  height: auto;
+}
+
+/* Footer Styles */
+footer {
+  margin-top: 20px;
+  background-color: #dededea1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Footer List Styles */
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Footer List Item Styles */
+footer li {
+  display: inline-block;
+  margin: 5px;
+}
+
+/* Footer Link Styles */
+footer li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Footer Icon Styles */
+footer li img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+/* Form Input Styles */
+input[type="date"],
+input[type="time"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+/* Submit and Reset Button Styles */
+button[type="submit"],
+button[type="reset"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: 400;
+}
+
+/* Submit and Reset Button Hover Styles */
+button[type="submit"]:hover,
+button[type="reset"]:hover {
+  background-color: #0062cc;
+}
+
+/* Error Class for Input Fields */
+.error {
+  border: 2px solid #ffb008 !important;
 }
