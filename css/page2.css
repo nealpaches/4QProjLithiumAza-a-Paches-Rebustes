@@ -1,59 +1,82 @@
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background-color: #fafafa;
-  }
-  
-  header {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-  }
-  
-  header h1 {
-    margin: 0;
-    font-size: 2.5em;
-  }
-  
-  header p {
-    margin: 10px 0 0;
-    font-size: 1.2em;
-  }
-  
-  .container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 0 20px;
-  }
-  
-  section#summary {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  section#summary h2 {
-    margin-top: 0;
-    color: #333;
-  }
-  
-  .summary-details,
-  .booking-info {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  
-  .room-image {
-    display: block;
-    width: 270px;
-    height: 200px;
-    border-radius: 10px;
-    margin: 10px 0;
-    box-shadow:inset;  
-  }
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #fafafa;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+header p {
+  margin: 10px 0 0;
+  font-size: 1.2em;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+section#summary {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section#summary h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.summary-details,
+.booking-info {
+  margin-bottom: 20px;
+}
+
+.room-image {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  margin: 10px 0;
+  box-shadow: inset;
+}
+
+.summary-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.room-info,
+.guest-info {
+  flex: 1;
+  min-width: 200px;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+p {
+  margin: 10px 0;
+}
+
+.booking-info p {
+  margin: 10px 0;
+}
