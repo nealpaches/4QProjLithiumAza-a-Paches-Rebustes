@@ -41,61 +41,61 @@ function setRoomImage() {
 
     if (priceRange === "1000-2999") {
         if (numberOfGuests === 1) {
-            roomImage = "single-room.jpg";
+            roomImage = "../img/single-room.jpg";
             roomType = "Single Room";
             hotelName = "Go Hotels Iloilo";
         } else if (numberOfGuests <= 4) {
-            roomImage = "double-room.jpg";
+            roomImage = "../img/double-room.jpg";
             roomType = "Double Room";
             hotelName = "Tune Hotel - Makati";
         } else if (numberOfGuests <= 6) {
-            roomImage = "triple-room.jpg";
+            roomImage = "../img/triple-room.jpg";
             roomType = "Triple Room";
             hotelName = "City Garden Hotel Makati";
         } else {
-            roomImage = "deluxe-room.jpg";
+            roomImage = "../img/deluxe-room.jpg";
             roomType = "Deluxe Room";
             hotelName = "Bayfront Hotel Cebu";
         }
     } else if (priceRange === "3000-4999") {
         if (numberOfGuests === 1) {
-            roomImage = "single-room.jpg";
+            roomImage = "../img/single-room.jpg";
             roomType = "Single Room";
             hotelName = "Discovery Suites Ortigas";
         } else if (numberOfGuests <= 4) {
-            roomImage = "double-room.jpg";
+            roomImage = "../img/double-room.jpg";
             roomType = "Double Room";
             hotelName = "The Linden Suites Manila";
         } else if (numberOfGuests <= 6) {
-            roomImage = "triple-room.jpg";
+            roomImage = "../img/triple-room.jpg";
             roomType = "Triple Room";
             hotelName = "Golden Phoenix Hotel Manila";
         } else {
-            roomImage = "deluxe-room.jpg";
+            roomImage = "../img/deluxe-room.jpg";
             roomType = "Deluxe Room";
             hotelName = "The Heritage Hotel Manila";
         }
     } else if (priceRange === "5000-6999") {
         if (numberOfGuests === 1) {
-            roomImage = "single-room.jpg";
+            roomImage = "../img/single-room.jpg";
             roomType = "Single Room";
             hotelName = "New World Makati Hotel";
         } else if (numberOfGuests <= 4) {
-            roomImage = "double-room.jpg";
+            roomImage = "../img/double-room.jpg";
             roomType = "Double Room";
             hotelName = "The Farm at San Benito";
         } else if (numberOfGuests <= 6) {
-            roomImage = "triple-room.jpg";
+            roomImage = "../img/triple-room.jpg";
             roomType = "Triple Room";
             hotelName = "Shangri-La Mactan Resort & Spa";
         } else {
-            roomImage = "deluxe-room.jpg";
+            roomImage = "../img/deluxe-room.jpg";
             roomType = "Deluxe Room";
             hotelName = "The Peninsula Manila";
         }
     }
 
-    document.getElementById('roomImage').src = "../img/" + roomImage;
+    document.getElementById('roomImage').src = roomImage;
     document.getElementById('roomType').innerText = roomType;
     document.getElementById('hotelName').innerText = hotelName;
 }

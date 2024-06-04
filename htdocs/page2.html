@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Resortify Booking Page">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="description" content="Resortify Booking Summary">
+    <meta name="keywords" content="HTML, CSS">
     <meta name="author" content="Kyden Gabriel L. Rebustes, Zachariah Francis G. Azaña, Neal David E. Paches">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking</title>
+    <title>Booking Summary</title>
     <link rel="icon" href="../img/Resortify Favicon.png" type="image/gif">
-    <link rel="stylesheet" href="../css/page1.css" type="text/css">
+    <link rel="stylesheet" href="../css/page2.css" type="text/css">
 </head>
 <body>
     <header>
@@ -16,67 +16,32 @@
         <p>“Your Perfect Stay, Just a Click Away!”</p>
     </header>
     <div class="container">
-        <section id="booking">
-            <h2>Secure Booking</h2>
-            <form>
-                <fieldset>
-                    <legend>Step 1: Your Details</legend>
-                    <label for="firstname">First name</label>
-                    <input type="text" id="firstname" name="firstname" required disabled>
-                    
-                    <label for="lastname">Last name</label>
-                    <input type="text" id="lastname" name="lastname" required disabled>
-                    
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required disabled>
-        
-                    <label for="mobile">Mobile number</label>
-                    <input type="text" id="mobile" name="mobile" required disabled>
-                </fieldset>
-                <fieldset>
-                    <legend>Step 2: Booking Details</legend>
-                    <label for="room">Room</label>
-                    <img id="roomImage" src="" class="room-image">
-                    <h1 id="hotelName"></h1>
-                    <h1 id="roomType"></h1>
-                    <label for="checkInDate">Check-In Date</label>
-                    <input type="text" id="checkInDate" name="checkInDate" disabled>
-                    <label for="checkInTime">Check-In Time</label>
-                    <input type="text" id="checkInTime" name="checkInTime" disabled>
-                    <label for="checkOutDate">Check-Out Date</label>
-                    <input type="text" id="checkOutDate" name="checkOutDate" disabled>
-                    <label for="checkOutTime">Check-Out Time</label>
-                    <input type="text" id="checkOutTime" name="checkOutTime" disabled>
-                    <label for="guests">Guests</label>
-                    <input type="text" id="guests" name="guests" disabled>
-                    <label for="roomRates">Desired Price Range</label>
-                    <input type="text" id="roomRates" name="roomRates" disabled>
-                </fieldset>
-                <fieldset>
-                    <legend>Step 3: Payment Method</legend>
-                    <input type="radio" id="payment-card" name="payment-method" value="card" onclick="togglePaymentDetails('card')"disabled>
-                    <label for="payment-card">Card</label>
-                    <input type="radio" id="payment-gcash" name="payment-method" value="gcash" onclick="togglePaymentDetails('gcash')"disabled>
-                    <label for="payment-gcash">Gcash</label>
-
-                    <div id="card-details" style="display:none;">
-                        <label for="card-number">Card Number</label>
-                        <input type="text" id="card-number" name="card-number"disabled>
-
-                        <label for="card-expiry">Expiry Date</label>
-                        <input type="text" id="card-expiry" name="card-expiry" placeholder="MM/YY"disabled>
-
-                        <label for="card-cvc">CVC</label>
-                        <input type="text" id="card-cvc" name="card-cvc"disabled>
-                    </div>
-
-                    <div id="gcash-details" style="display:none;">
-                        <label for="gcash-number">Gcash Number</label>
-                        <input type="text" id="gcash-number" name="gcash-number"disabled>
-                    </div>
-                </fieldset>
-                <button class="button" type="submit" onclick="bookingDone()">Submit</button>
-            </form>
+        <section id="summary">
+            <h2>Booking Summary</h2>
+            <div class="summary-details">
+                <img id="roomImage" src="" alt="Room Image" class="room-image">
+                <div class="room-info">
+                    <h3>Room Details</h3>
+                    <p id="hotelName"></p>
+                    <p id="roomType"></p>
+                </div>
+                <div class="guest-info">
+                    <h3>Guest Details</h3>
+                    <p>Name: <span id="guestName"></span></p>
+                    <p>Email: <span id="guestEmail"></span></p>
+                    <p>Mobile Number: <span id="guestMobile"></span></p>
+                </div>
+            </div>
+            <div class="booking-info">
+                <h3>Booking Details</h3>
+                <p>Check-In Date: <span id="checkInDate"></span></p>
+                <p>Check-In Time: <span id="checkInTime"></span></p>
+                <p>Check-Out Date: <span id="checkOutDate"></span></p>
+                <p>Check-Out Time: <span id="checkOutTime"></span></p>
+                <p>Guests: <span id="guests"></span></p>
+                <p>Desired Price Range: <span id="roomRates"></span></p>
+                <p id="paymentMethod">Payment Method: <span id="paymentMethodValue"></span></p>
+            </div>
         </section>
     </div>
     <script src="../src/page2.js"></script>
